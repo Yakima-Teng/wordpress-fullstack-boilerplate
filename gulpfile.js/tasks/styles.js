@@ -8,7 +8,7 @@ const config = require('../config').styles;
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const sassGlob = require('gulp-sass-glob');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 
 function handleError(err) {
@@ -23,7 +23,7 @@ gulp.task('styles', function () {
 
     // normal version
     .pipe(sass({
-      includePaths: ['node_modules'] 
+      includePaths: ['node_modules']
     }))
     .on('error', handleError)
     .pipe(autoprefixer())

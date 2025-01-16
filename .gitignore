@@ -3,6 +3,8 @@
 # Ignore modules installed with npm
 node_modules/
 
+/.idea
+
 # Don't include built files
 public/assets/images/*
 public/assets/js/*
